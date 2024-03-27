@@ -16,27 +16,69 @@ struct BookDetailView: View {
         VStack(alignment: .leading) {
             
             ZStack {
-                // Background gradient spanning the entire screen
                 LinearGradient(
                     gradient: Gradient(colors: [.indigoMedium, .salmonLight]),
                     startPoint: .top,
                     endPoint: .bottom
                 )
                 .edgesIgnoringSafeArea(.all)
-                
-                Image(systemName: "book")
-                    .imageModifier(maxHeight: 250)
+                if let url = URL(string: book.thumbnailUrl) {
+                    AsyncImage(url: url) { image in
+                        image
+                            .imageModifier(maxHeight: 250)
+                    } placeholder: {
+                        Image(systemName: "arrowshape.down.circle")
+                            .imageModifier(maxHeight: 250)
+                    } //: AsyncImage
                     .padding(.all, 8)
                     .frame(maxWidth: .infinity)
-                //TODO: Display the book cover image asynchronously if the thumbnailUrl is valid
-                //TODO: Display a placeholder image while the book cover image is loading
-                //TODO: Display a default book cover image if the thumbnailUrl is empty or invalid
-                //TODO: Display the book cover image specified by the imageName property
-                
+                } else if !book.imageName.isEmpty {
+                    Image(book.imageName)
+                        .imageModifier(maxHeight: 250)
+                        .padding(.all, 8)
+                        .frame(maxWidth: .infinity)
+                } else {
+                    Image(systemName: "book")
+                        .imageModifier(maxHeight: 250)
+                        .padding(.all, 8)
+                        .frame(maxWidth: .infinity)
+                }
             }
+            
+            ScrollView {
+                VStack(alignment: .leading, spacing: 8) {
+                    Text(book.name)
+                        .font(.title)
+                        .fontWeight(.bold)
+                        .foregroundColor(.black)
 
-            // TODO: Display // Book name, auther, genre, publisher, price, summary
+                    Text(book.author)
+                        .font(.headline)
+                        .fontWeight(.regular)
+                        .foregroundColor(.secondary)
 
+                    Text(book.genre)
+                        .font(.body)
+                        .fontWeight(.semibold)
+                        .foregroundColor(.secondary)
+
+                    Text(book.publisher)
+                        .font(.callout)
+                        .fontWeight(.medium)
+                        .foregroundColor(.secondary)
+
+                    Text("$\(String(format: "%.2f", book.price))")
+                        .font(.headline)
+                        .fontWeight(.semibold)
+                        .foregroundColor(.accentColor)
+
+                    Text(book.summary)
+                        .fontWeight(.medium)
+                        .foregroundColor(.black)
+                        .multilineTextAlignment(.leading)
+                }
+                .padding(.all, 16)
+            }
             
             Spacer() // Pushes content to the top
             
