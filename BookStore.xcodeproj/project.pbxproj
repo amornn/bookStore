@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		235209972CF56E2A00B512DE /* RotatedAroundContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 235209962CF56E2A00B512DE /* RotatedAroundContainerView.swift */; };
 		23750BFD2BAC1F18009226B7 /* BookStoreApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23750BFC2BAC1F18009226B7 /* BookStoreApp.swift */; };
 		23750BFF2BAC1F18009226B7 /* BookListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23750BFE2BAC1F18009226B7 /* BookListView.swift */; };
 		23750C012BAC1F1A009226B7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 23750C002BAC1F1A009226B7 /* Assets.xcassets */; };
@@ -20,6 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		235209962CF56E2A00B512DE /* RotatedAroundContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RotatedAroundContainerView.swift; sourceTree = "<group>"; };
 		23750BF92BAC1F18009226B7 /* BookStore.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BookStore.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		23750BFC2BAC1F18009226B7 /* BookStoreApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookStoreApp.swift; sourceTree = "<group>"; };
 		23750BFE2BAC1F18009226B7 /* BookListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookListView.swift; sourceTree = "<group>"; };
@@ -68,6 +70,7 @@
 				23750BFC2BAC1F18009226B7 /* BookStoreApp.swift */,
 				23750BFE2BAC1F18009226B7 /* BookListView.swift */,
 				23750C192BB2CF6D009226B7 /* BookRow.swift */,
+				235209962CF56E2A00B512DE /* RotatedAroundContainerView.swift */,
 				23750C0F2BB2B273009226B7 /* BookDetailView.swift */,
 				23750C152BB2CB70009226B7 /* CustomButtonView.swift */,
 				23750C132BB2B63A009226B7 /* Image+Extensions.swift */,
@@ -164,6 +167,7 @@
 				23750C162BB2CB70009226B7 /* CustomButtonView.swift in Sources */,
 				23750C182BB2CDF7009226B7 /* Color+Extensions.swift in Sources */,
 				23750BFF2BAC1F18009226B7 /* BookListView.swift in Sources */,
+				235209972CF56E2A00B512DE /* RotatedAroundContainerView.swift in Sources */,
 				23750BFD2BAC1F18009226B7 /* BookStoreApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
